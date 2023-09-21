@@ -30,55 +30,22 @@ public class Producto {
    * Enumeración para el tipo de producto.
    */
   public enum Tipo {
-    /**
-     * Artículos de oficina y escuela.
-     */
     ELECTRONICA_OFICINA((byte) 2),
-
-    /**
-     * Artículos de lámpara y Oficina.
-     */
     @SuppressWarnings("SpellCheckingInspection")
     MUEBLES_Y_LAMPARA_OFICINA((byte) 3),
-
-    /**
-     * Artículos de oficina y escuela.
-     */
     OFICINA_Y_ESCUELA((byte) 1);
 
-    /**
-     * Valor del tipo de producto.
-     */
     private final byte value;
-    /**
-     * Descripción String del tipo de producto.
-     */
     private final String string;
 
-    /**
-     * Obtener el valor del tipo de producto.
-     *
-     * @return valor
-     */
     public byte getValue() {
       return value;
     }
 
-    /**
-     * Obtener la descripción del tipo de producto.
-     *
-     * @return descripción
-     */
-    @Override
     public String toString() {
       return string;
     }
 
-    /**
-     * Constructor de la enumeración Tipo.
-     *
-     * @param value valor del tipo de producto
-     */
     Tipo(final byte value) {
       this.value = value;
 
@@ -95,7 +62,7 @@ public class Producto {
   /**
    * Constructor de la clase Producto.
    *
-   * @param id        Id del producto
+   * @param id        ID del producto
    * @param nombre    nombre del producto
    * @param proveedor proveedor del producto
    * @param tipo      tipo de producto
@@ -116,7 +83,7 @@ public class Producto {
    * Validar los atributos del producto. El tipo de producto no se valida aquí, ya
    * que se valida al momento de crear el objeto.
    *
-   * @param id        Id del producto
+   * @param id        ID del producto
    * @param nombre    nombre del producto
    * @param proveedor proveedor del producto
    * @param precio    precio del producto

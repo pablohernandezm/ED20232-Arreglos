@@ -55,15 +55,7 @@ public class ItemList {
    * Enumeración para el criterio de ordenamiento.
    */
   public enum CriterioOrden {
-    /**
-     * Ordenar por precio.
-     */
-    precio,
-
-    /**
-     * Ordenar por nombre.
-     */
-    nombre
+    precio, nombre
   }
 
   /**
