@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.nio.file.Files;
 
-class ItemListTest {
+public class ItemListTest {
 
   @Test
-  void guardarItems(){
+  public void guardarItems(){
     ItemList lista = new ItemList();
     String[] productos = {"papa", "arroz", "frijol", "carne", "pollo", "pescado", "leche", "huevos", "queso", "yogurt"};
     String[] proveedores = {"Alpina", "Colanta", "Colombina", "Diana", "Zenú", "Pilgrim's", "Bavaria", "Coca-Cola", "Pepsi", "Postobón"};
@@ -30,7 +30,7 @@ class ItemListTest {
   }
 
   @Test
-  void cargarItems(){
+  public void cargarItems(){
     ItemList lista = new ItemList();
     Assertions.assertDoesNotThrow(lista::cargarItems, "No se pudo cargar el archivo");
   }
