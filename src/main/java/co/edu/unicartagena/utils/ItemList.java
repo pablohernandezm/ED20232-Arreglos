@@ -199,8 +199,6 @@ public class ItemList {
   public Producto buscarItem(String id) {
     for (int i = 0; i < size; i++) {
       if (list[i].getId().equals(id)) {
-        // System.out.println(String.format("Item a buscar: %s\nEncontrado en index %d :
-        // %s", id, i, list[i].getID()));
         return list[i];
       }
     }
@@ -297,6 +295,14 @@ public class ItemList {
   }
 
   /**
+   * Devuelve el tamaño de la lista.
+   * @return tamaño de la lista
+   */
+  public int size() {
+    return size;
+  }
+
+  /**
    * Carga los productos de la lista desde un archivo.
    *
    * @throws FileNotFoundException si el archivo no existe
@@ -309,7 +315,8 @@ public class ItemList {
               PATH.toAbsolutePath()));
     }
     try (Stream<String> lines = Files.lines(PATH)) {
-      list = new Producto[MAX];
+      this.list = new Producto[MAX];
+      this.size = 0;
 
       lines.forEach((line) -> {
         String[] partes = line.split(";");
